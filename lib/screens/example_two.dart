@@ -24,7 +24,7 @@ class _ExampleTwoState extends State<ExampleTwo> {
           children: [
             Center(
               child: AnimatedContainer(
-                height: 300,
+                height: isBigger? 500:100,
                 width: isBigger ? 500 : 100,
                  duration: const Duration(seconds: 3),
                  curve: Curves.bounceIn,

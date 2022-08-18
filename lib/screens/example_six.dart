@@ -10,18 +10,23 @@ class ExampleSix extends StatefulWidget {
 class _ExampleSixState extends State<ExampleSix>
     with SingleTickerProviderStateMixin {
   late AnimationController animationController;
-  late Animation heightAnimation;
-  late Animation widthAnimation;
-  late Animation textSizeAnimation;
-  late Animation colorAnimation;
+  late Animation<double> heightAnimation;
+  late Animation<double> widthAnimation;
+  late Animation<double> textSizeAnimation;
+  late Animation<Color?> colorAnimation;
 
   @override
   void initState() {
-    animationController = AnimationController(vsync: this, duration: const Duration(seconds: 3));
-    widthAnimation = Tween<double>(begin: 120, end: 200).animate(animationController);
-    textSizeAnimation = Tween<double>(begin: 14, end: 35).animate(animationController);
-    heightAnimation = Tween<double>(begin: 50, end: 200).animate(animationController);
-    colorAnimation = ColorTween(begin: Colors.blue, end: Colors.red).animate(animationController);
+    animationController =
+        AnimationController(vsync: this, duration: const Duration(seconds: 3));
+    widthAnimation =
+        Tween<double>(begin: 120, end: 200).animate(animationController);
+    textSizeAnimation =
+        Tween<double>(begin: 14, end: 50).animate(animationController);
+    heightAnimation =
+        Tween<double>(begin: 50, end: 200).animate(animationController);
+    colorAnimation = ColorTween(begin: Colors.blue, end: Colors.red)
+        .animate(animationController);
 
     animationController.addListener(() {
       setState(() {});

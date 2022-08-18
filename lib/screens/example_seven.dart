@@ -16,7 +16,7 @@ class _ExampleSevenState extends State<ExampleSeven> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(""),
+        title: Text("AnimatedDefaultTextStyle"),
       ),
       body: Center(
         child: AnimatedDefaultTextStyle(
@@ -36,7 +36,7 @@ class _ExampleSevenState extends State<ExampleSeven> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
-            _fontSize = _first ? 90 : 60;
+            _fontSize = _first ? 70 : 25;
             _color = _first ? Colors.blue : Colors.red;
             _first = !_first;
           });

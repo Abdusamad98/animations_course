@@ -1,11 +1,23 @@
+import 'package:animations_course/constants.dart';
 import 'package:animations_course/screens/example_eight.dart';
+import 'package:animations_course/screens/example_eighteen.dart';
+import 'package:animations_course/screens/example_eleven.dart';
+import 'package:animations_course/screens/example_fifteen.dart';
 import 'package:animations_course/screens/example_five.dart';
 import 'package:animations_course/screens/example_four.dart';
+import 'package:animations_course/screens/example_fourteen.dart';
+import 'package:animations_course/screens/example_nine.dart';
 import 'package:animations_course/screens/example_one.dart';
 import 'package:animations_course/screens/example_seven.dart';
+import 'package:animations_course/screens/example_seventeen.dart';
 import 'package:animations_course/screens/example_six.dart';
+import 'package:animations_course/screens/example_sixteen.dart';
+import 'package:animations_course/screens/example_ten.dart';
+import 'package:animations_course/screens/example_thirteen.dart';
 import 'package:animations_course/screens/example_three.dart';
+import 'package:animations_course/screens/example_twelve.dart';
 import 'package:animations_course/screens/example_two.dart';
+import 'package:animations_course/screens/router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,11 +30,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ExampleFourth(),
+      onGenerateRoute: MyRouter.generateRoute,
+      initialRoute: homeRoute,
     );
   }
 }
