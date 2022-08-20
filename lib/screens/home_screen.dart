@@ -1,5 +1,4 @@
 import 'package:animations_course/constants.dart';
-import 'package:animations_course/screens/example_one.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -29,6 +28,10 @@ class _HomeScreenState extends State<HomeScreen> {
     sixteenScreenRoute,
     seventeenthScreenRoute,
     eighteenthScreenRoute,
+    nineteenthScreenRoute,
+    twentyScreenRoute,
+    twentyFirstScreenRoute,
+    twentySecondScreenRoute
   ];
 
   @override
@@ -39,17 +42,47 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: List.generate(
-            routeNames.length,
-            (index) => ListTile(
-              title: Text("Example ${index + 1}"),
-              onTap: () {
-                Navigator.pushNamed(context, routeNames[index]);
-              },
+          children: [
+            ...List.generate(
+              routeNames.length,
+              (index) => ListTile(
+                title: Text("Example ${index + 1}"),
+                onTap: () {
+                  Navigator.pushNamed(context, routeNames[index]);
+                },
+              ),
             ),
-          ),
+            myButton(() {
+              Navigator.pushNamed(context, taskScreenRoute);
+            })
+          ],
         ),
       ),
     );
   }
+
+  Widget myButton(VoidCallback onTap) => Container(
+        margin: const EdgeInsets.all(16),
+        child: TextButton(
+            onPressed: onTap,
+            style: TextButton.styleFrom(backgroundColor: Colors.red),
+            child: Container(
+              width: double.infinity,
+              height: 60,
+              decoration: BoxDecoration(
+                //color: Colors.blue,
+                borderRadius: BorderRadius.circular(32),
+              ),
+              child: const Center(
+                child: Text(
+                  "Task screen",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 35,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+            )),
+      );
 }

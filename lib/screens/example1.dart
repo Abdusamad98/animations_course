@@ -1,7 +1,6 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'dart:math' as math;
+
 
 class ExampleOne extends StatefulWidget {
   const ExampleOne({Key? key}) : super(key: key);

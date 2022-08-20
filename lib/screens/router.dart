@@ -1,23 +1,28 @@
 import 'package:animations_course/constants.dart';
-import 'package:animations_course/screens/example_eight.dart';
-import 'package:animations_course/screens/example_eighteen.dart';
-import 'package:animations_course/screens/example_eleven.dart';
-import 'package:animations_course/screens/example_fifteen.dart';
-import 'package:animations_course/screens/example_five.dart';
-import 'package:animations_course/screens/example_four.dart';
-import 'package:animations_course/screens/example_fourteen.dart';
-import 'package:animations_course/screens/example_nine.dart';
-import 'package:animations_course/screens/example_one.dart';
-import 'package:animations_course/screens/example_seven.dart';
-import 'package:animations_course/screens/example_seventeen.dart';
-import 'package:animations_course/screens/example_six.dart';
-import 'package:animations_course/screens/example_sixteen.dart';
-import 'package:animations_course/screens/example_ten.dart';
-import 'package:animations_course/screens/example_thirteen.dart';
-import 'package:animations_course/screens/example_three.dart';
-import 'package:animations_course/screens/example_twelve.dart';
-import 'package:animations_course/screens/example_two.dart';
+import 'package:animations_course/screens/example19.dart';
+import 'package:animations_course/screens/example20.dart';
+import 'package:animations_course/screens/example21.dart';
+import 'package:animations_course/screens/example22.dart';
+import 'package:animations_course/screens/example8.dart';
+import 'package:animations_course/screens/example18.dart';
+import 'package:animations_course/screens/example11.dart';
+import 'package:animations_course/screens/example15.dart';
+import 'package:animations_course/screens/example5.dart';
+import 'package:animations_course/screens/example4.dart';
+import 'package:animations_course/screens/example14.dart';
+import 'package:animations_course/screens/example9.dart';
+import 'package:animations_course/screens/example1.dart';
+import 'package:animations_course/screens/example7.dart';
+import 'package:animations_course/screens/example17.dart';
+import 'package:animations_course/screens/example6.dart';
+import 'package:animations_course/screens/example16.dart';
+import 'package:animations_course/screens/example10.dart';
+import 'package:animations_course/screens/example13.dart';
+import 'package:animations_course/screens/example3.dart';
+import 'package:animations_course/screens/example12.dart';
+import 'package:animations_course/screens/example2.dart';
 import 'package:animations_course/screens/home_screen.dart';
+import 'package:animations_course/screens/task_screen.dart';
 import 'package:flutter/material.dart';
 
 class MyRouter {
@@ -61,6 +66,18 @@ class MyRouter {
         return MaterialPageRoute(builder: (_) => ExampleSeventeen());
       case eighteenthScreenRoute:
         return MaterialPageRoute(builder: (_) => ExampleEighteen());
+      case nineteenthScreenRoute:
+        return MaterialPageRoute(builder: (_) => Example19());
+      case twentyScreenRoute:
+        return MaterialPageRoute(builder: (_) => Example20());
+      case twentyFirstScreenRoute:
+        return MaterialPageRoute(builder: (_) => Example21());
+      case taskScreenRoute:
+        return MaterialPageRoute(builder: (_) => TaskScreen());
+
+      case twentySecondScreenRoute:
+        return MaterialPageRoute(builder: (_) => Example22());
+
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(
