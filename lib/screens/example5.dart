@@ -23,10 +23,15 @@ class _ExampleFiveState extends State<ExampleFive>
 
     // Defining both color and size animations
     colorAnimation = ColorTween(begin: Colors.red, end: Colors.green).animate(controller);
-    sizeAnimation = Tween<double>(begin: 100.0, end: 200.0).animate(controller)..addListener(() {
+
+    sizeAnimation = Tween<double>(begin: 100.0, end: 300.0).animate(CurvedAnimation(
+      parent: controller,
+      curve: Curves.bounceIn,
+      reverseCurve: Curves.bounceIn,
+    ))..addListener(() {
       print("CONTROLLER VALUE: ${controller.value}");
     });
-    borderSizeAnimation = Tween<double>(begin: 5.0, end: 16.0).animate(controller);
+    borderSizeAnimation = Tween<double>(begin: 5.0, end: 50.0).animate(controller);
 
     // Rebuilding the screen when animation goes ahead
     controller.addListener(() {

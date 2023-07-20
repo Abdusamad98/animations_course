@@ -24,10 +24,10 @@ class _ExampleTwoState extends State<ExampleTwo> {
           children: [
             Center(
               child: AnimatedContainer(
-                height: isBigger? 500:100,
-                width: isBigger ? 500 : 100,
-                 duration: const Duration(seconds: 3),
-                 curve: Curves.bounceIn,
+                height: isBigger? 300:100,
+                width: isBigger ? 300 : 100,
+                duration: const Duration(seconds: 3),
+                curve: Curves.bounceIn,
                 decoration: BoxDecoration(
                   gradient:
                     // LinearGradient(

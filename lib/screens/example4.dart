@@ -17,8 +17,7 @@ class _ExampleFourthState extends State<ExampleFourth>
 
   @override
   void initState() {
-    animationController =
-        AnimationController(vsync: this, duration: const Duration(seconds: 3));
+    animationController = AnimationController(vsync: this, duration: const Duration(seconds: 3));
 
     curvedAnimation = CurvedAnimation(
       parent: animationController,

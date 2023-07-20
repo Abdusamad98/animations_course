@@ -20,7 +20,7 @@ class _ExampleSevenState extends State<ExampleSeven> {
       ),
       body: Center(
         child: AnimatedDefaultTextStyle(
-          duration: const Duration(milliseconds: 300),
+          duration: const Duration(seconds: 2),
           curve: Curves.bounceInOut,
           style: TextStyle(
             fontSize: _fontSize,
