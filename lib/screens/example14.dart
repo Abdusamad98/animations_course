@@ -17,13 +17,13 @@ class _ExplicitFourteenState extends State<ExplicitFourteen>
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 5),
       vsync: this,
     )..repeat(reverse: true);
 
     _alignAnimation = Tween<AlignmentGeometry>(
       begin: Alignment.topRight,
-      end: Alignment.bottomLeft,
+      end: Alignment.topLeft,
     ).animate(
       CurvedAnimation(
         parent: _controller,
@@ -31,7 +31,7 @@ class _ExplicitFourteenState extends State<ExplicitFourteen>
       ),
     );
 
-    _rotationAnimation = Tween<double>(begin: 0, end: 4).animate(
+    _rotationAnimation = Tween<double>(begin: 0, end: 6.28).animate(
       CurvedAnimation(
         parent: _controller,
         curve: Curves.linear,
@@ -52,7 +52,7 @@ class _ExplicitFourteenState extends State<ExplicitFourteen>
         title: const Text("AlignTransition"),
       ),
       body: SizedBox(
-        height: 400,
+        height: MediaQuery.of(context).size.height,
         child: AlignTransition(
           alignment: _alignAnimation,
           child: RotationTransition(

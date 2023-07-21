@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:animations_course/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -33,7 +35,9 @@ class _HomeScreenState extends State<HomeScreen> {
     twentyFirstScreenRoute,
     twentySecondScreenRoute
   ];
-
+  double x = 0;
+  double y = 0;
+  double z = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,6 +47,47 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+
+            Transform.translate(
+              offset: const Offset(10.0, 20.0),
+              child: Container(
+                padding: const EdgeInsets.all(8.0),
+                color: const Color(0xFF7F7F7F),
+                child: const Text('Quarter'),
+              ),
+            ),
+
+            Center(
+              child: Transform(
+                transform: Matrix4(
+                  1,0,0,0,
+                  0,1,0,0,
+                  0,0,1,0,
+                  0,0,0,1,
+                )..rotateX(x)..rotateY(y)..rotateZ(z),
+                alignment: FractionalOffset.center,
+                child: GestureDetector(
+                  onPanUpdate: (details) {
+                    setState(() {
+                      y = y - details.delta.dx / 100;
+                      x = x + details.delta.dy / 100;
+                    });
+                  },
+                  child: Container(
+                    color: Colors.red,
+                    height: 200.0,
+                    width: 200.0,
+                  ),
+                ),
+              ),
+            ),
+
+            // Transform.scale(
+            //   scaleX: 2,
+            //   scaleY: 1,
+            //   //scale: 0.25,
+            //   child: const Icon(Icons.edit,size: 100,),),
+
             ...List.generate(
               routeNames.length,
               (index) => ListTile(

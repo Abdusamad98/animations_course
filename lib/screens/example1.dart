@@ -29,7 +29,7 @@ class _ExampleOneState extends State<ExampleOne> with TickerProviderStateMixin {
       ..addStatusListener((status) {
 
       });
-    animationController.repeat();
+    animationController.repeat(reverse: true);
   }
 
   @override
@@ -40,7 +40,6 @@ class _ExampleOneState extends State<ExampleOne> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    print("ANIMATION VALUE:${animation.value}");
     return Scaffold(
       appBar: AppBar(
         title: const Text("Transform.rotate"),

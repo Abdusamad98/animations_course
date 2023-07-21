@@ -43,7 +43,8 @@ class _ExampleEighteenState extends State<ExampleEighteen>
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(16),
-              child: Image.asset("assets/images/car.png"),
+              child:
+              Image.asset("assets/images/car.png"),
             ),
           ),
           builder: (BuildContext context, Widget? child) {

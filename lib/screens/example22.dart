@@ -22,8 +22,8 @@ class _Example22State extends State<Example22>
 
 
 
-    animation = Tween<Offset>(begin: Offset.zero, end: Offset(1.5, 0)).animate(
-        CurvedAnimation(parent: animationController, curve: Curves.bounceIn))
+    animation = Tween<Offset>(begin: Offset.zero, end: Offset(0.5, 1)).animate(
+        CurvedAnimation(parent: animationController, curve: Curves.linear))
       ..addListener(() {
         setState(() {});
       });

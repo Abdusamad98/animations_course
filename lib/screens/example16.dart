@@ -11,7 +11,7 @@ class ExampleSixteen extends StatefulWidget {
 class _ExampleSixteenState extends State<ExampleSixteen>
     with TickerProviderStateMixin {
   late AnimationController _controller;
-  late TextStyleTween _styleTween;
+  late Animation<TextStyle> _styleTween;
   late CurvedAnimation _curvedAnimation;
 
   @override
@@ -21,16 +21,18 @@ class _ExampleSixteenState extends State<ExampleSixteen>
       duration: const Duration(seconds: 2),
       vsync: this,
     )..repeat(reverse: true);
-    _styleTween = TextStyleTween(
-      begin: const TextStyle(
-          fontSize: 50, color: Colors.blue, fontWeight: FontWeight.w900),
-      end: const TextStyle(
-          fontSize: 50, color: Colors.red, fontWeight: FontWeight.w100),
-    );
+
     _curvedAnimation = CurvedAnimation(
       parent: _controller,
       curve: Curves.bounceIn,
     );
+    _styleTween = TextStyleTween(
+      begin: const TextStyle(
+          fontSize: 50, color: Colors.blue, fontWeight: FontWeight.w900),
+      end: const TextStyle(
+          fontSize: 100, color: Colors.red, fontWeight: FontWeight.w100),
+    ).animate(_curvedAnimation);
+
   }
 
 
@@ -40,7 +42,7 @@ class _ExampleSixteenState extends State<ExampleSixteen>
       appBar: AppBar(title: Text("DefaultTextStyleTransition "),),
       body: Center(
         child: DefaultTextStyleTransition(
-          style: _styleTween.animate(_curvedAnimation),
+          style: _styleTween,
           child: const Text('Flutter'),
         ),
       ),
