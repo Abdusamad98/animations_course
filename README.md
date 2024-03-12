@@ -1,2 +1,2 @@
 # animations_course
-Flutter N5 BootCampda Animationlarni birga o'rganamiz
+Flutter N10 BootCampda Animationlarni birga o'rganamiz

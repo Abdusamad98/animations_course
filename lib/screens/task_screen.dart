@@ -54,25 +54,6 @@ class _TaskScreenState extends State<TaskScreen> with TickerProviderStateMixin {
                   color: colorAnimation.value,
                 ),
               ),
-              // Positioned(
-              //   top: 10,
-              //   right: 0,
-              //   child: Container(
-              //     width: animation.value/2,
-              //     height: animation.value/2,
-              //     decoration: const BoxDecoration(
-              //         color: Colors.red, shape: BoxShape.circle),
-              //     child: Center(
-              //       child: Text(
-              //         count.toString(),
-              //         style: const TextStyle(
-              //             color: Colors.white,
-              //             fontSize: 12,
-              //             fontWeight: FontWeight.w700),
-              //       ),
-              //     ),
-              //   ),
-              // ),
             ],
           ),
           const SizedBox(

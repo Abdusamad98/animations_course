@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:animations_course/constants.dart';
 import 'package:flutter/material.dart';
@@ -81,13 +80,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-
-            // Transform.scale(
-            //   scaleX: 2,
-            //   scaleY: 1,
-            //   //scale: 0.25,
-            //   child: const Icon(Icons.edit,size: 100,),),
-
             ...List.generate(
               routeNames.length,
               (index) => ListTile(
