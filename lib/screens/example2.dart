@@ -44,7 +44,7 @@ class _ExampleTwoState extends State<ExampleTwo> {
                       Colors.green,
                       Colors.white,
                     ],
-                    stops: [isBigger ? 0.8 : 0.2, 1.0],
+                    stops: [isBigger ? 0.6 : 0.2, 1.0],
                   ),
                 ),
                 child: ClipRRect(

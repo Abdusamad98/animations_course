@@ -23,7 +23,7 @@ class _ExplicitFourteenState extends State<ExplicitFourteen>
 
     _alignAnimation = Tween<AlignmentGeometry>(
       begin: Alignment.topRight,
-      end: Alignment.topLeft,
+      end: Alignment.bottomLeft,
     ).animate(
       CurvedAnimation(
         parent: _controller,

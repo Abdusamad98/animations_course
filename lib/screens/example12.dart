@@ -31,8 +31,12 @@ class _ExampleTwelveState extends State<ExampleTwelve> {
             color: Colors.amberAccent,
             child: AnimatedSize(
               curve: Curves.easeIn,
-              duration: const Duration(seconds: 1),
-              child: FlutterLogo(size: _size),
+              duration: const Duration(seconds: 10),
+              child: Container(
+                width: _size,
+                height: _size,
+                color: Colors.black,
+              ),
             ),
           ),
         ),

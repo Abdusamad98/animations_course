@@ -21,7 +21,7 @@ class _ExampleThreeState extends State<ExampleThree> {
           width: 200,
           height: 350,
           child: Stack(
-            children: <Widget>[
+            children: [
               AnimatedPositioned(
                 width: selected ? 200.0 : 100.0,
                 height: selected ? 50.0 : 200.0,

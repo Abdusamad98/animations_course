@@ -8,28 +8,31 @@ class ExampleOne extends StatefulWidget {
   State<ExampleOne> createState() => _ExampleOneState();
 }
 
-class _ExampleOneState extends State<ExampleOne> with TickerProviderStateMixin {
+class _ExampleOneState extends State<ExampleOne>
+    with SingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<double> animation;
 
   @override
   void initState() {
     super.initState();
-    animationController =
-        AnimationController(vsync: this, duration: const Duration(seconds: 3));
+    animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 3),
+    );
 
-    animation = Tween<double>(begin: 0, end: 4 * pi).animate(CurvedAnimation(
-      parent: animationController,
-      curve: Curves.bounceIn,
-      reverseCurve: Curves.easeOut,
-    ))
+    animation = Tween<double>(begin: 0, end: 4 * pi).animate(
+      CurvedAnimation(
+        parent: animationController,
+        curve: Curves.linear,
+        reverseCurve: Curves.linear,
+      ),
+    )
       ..addListener(() {
         setState(() {});
       })
-      ..addStatusListener((status) {
-
-      });
-    animationController.repeat(reverse: true);
+      ..addStatusListener((status) {});
+    animationController.forward();
   }
 
   @override
